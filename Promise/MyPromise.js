@@ -19,7 +19,7 @@ class MyPromise {
             this.rejected(error)
         }
     }
-    
+
     resolve = (value) => {
         if(this.state === PENDING){
             this.value = value;
@@ -69,3 +69,8 @@ new MyPromise((resolve, reject)=>{
 }).then((res=>{
     console.log(res+2)
 }))
+
+/**
+ * 复杂版本可看博客 
+ * https://lemonlife.top/2020/02/10/interview/#%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8Bpromise%E4%BB%A5%E5%8F%8A%E5%86%85%E9%83%A8%E7%9A%84%E5%AE%9E%E7%8E%B0
+ */
