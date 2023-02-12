@@ -36,8 +36,8 @@ class PromistLimit {
 
   run = async (fun, resolve, ...args) => {
     this.runing++;
-    const result = (async () => fun(args))();
-    resolve(result);
+    const result = (async () => fun(...args))();
+    resolve(result)
     try {
       await result;
     } catch {}
